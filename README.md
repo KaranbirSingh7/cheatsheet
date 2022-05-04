@@ -83,3 +83,21 @@ Delete a secret:
 ```bash
 credhub delete -n /p-bosh/concourse/myapp_password
 ```
+
+### Knife (Chef)
+
+Show/list cookbooks from current run_list
+
+```bash
+knife node show `hostname -s`
+```
+
+Add new cookbook to run_list
+```bash
+knife node run_list add `hostname -s` recipe[linux_artifactory@X.X.X]
+```
+
+Remove cookbook from existing run_list
+```bash
+knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
+```
