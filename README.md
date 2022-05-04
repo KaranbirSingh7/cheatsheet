@@ -34,6 +34,10 @@ List running/processing tasks
 bosh tasks
 ```
 
+Debug bosh task
+```bash
+bosh task 12345 --debug
+```
 
 Cancel running/queued task
 ```bash
