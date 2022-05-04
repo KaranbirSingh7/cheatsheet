@@ -73,6 +73,11 @@ Get a secret:
 credhub get -n /p-bosh/concourse/myapp_password
 ```
 
+Get specific key on a secret:
+```bash
+credhub get -n /p-bosh/concourse/credhub_ca -k certificate
+```
+
 Import secret from YML:
 ```bash
 credhub import --file secrets.yml
