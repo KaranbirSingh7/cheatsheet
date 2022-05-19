@@ -2,6 +2,20 @@
 CheatSheet for day-to-day tasks
 
 
+### Python
+
+Start python server in oneline: 
+```sh
+python3 -m http.server 8080
+```
+
+### Bash
+
+Query website/endpoint every 10 secs:
+```sh
+while true; do curl -s https://google.com/; sleep 10;  done;
+```
+
 
 ### OpenSSL
 
