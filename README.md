@@ -15,7 +15,6 @@ openssl s_client -connect google.com:443 -servername google.com 2> /dev/null | o
 ```
 
 
-
 Verify if public certificate and private key matches:
 ```bash
 openssl x509 -in domain.public.crt -noout -modulus  | openssl md5
@@ -109,4 +108,19 @@ knife node run_list add `hostname -s` recipe[linux_artifactory@X.X.X]
 Remove cookbook from existing run_list
 ```bash
 knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
+```
+
+
+### JFrog Artifactory 
+
+Monitor logs when artifactory starts uo
+```sh
+tail -f /var/opt/jfrog/artifactory/log/console.log
+```
+
+Uninstall artifactory coompletely and delete data on disk
+```sh
+apt-get remove jfrog-artifactory-pro -y
+rm -rf /opt/jfrog/artifactory
+rm -rf /var/opt/jfrog/artifactory
 ```
