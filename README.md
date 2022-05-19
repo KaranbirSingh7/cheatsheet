@@ -113,12 +113,12 @@ knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
 
 ### JFrog Artifactory 
 
-Monitor logs when artifactory starts uo
+Monitor logs when artifactory starts up:
 ```sh
 tail -f /var/opt/jfrog/artifactory/log/console.log
 ```
 
-Uninstall artifactory coompletely and delete data on disk
+Uninstall artifactory coompletely and delete all data from disk:
 ```sh
 apt-get remove jfrog-artifactory-pro -y
 rm -rf /opt/jfrog/artifactory
