@@ -132,6 +132,13 @@ Run chef-client in debug mode
 chef-client -l debug
 ```
 
+### NPM
+
+Run npm install with verbose logging
+```sh
+npm install nodemon --loglevel verbose
+```
+
 
 ### JFrog Artifactory 
 
