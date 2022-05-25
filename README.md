@@ -124,6 +124,7 @@ Remove cookbook from existing run_list
 knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
 ```
 
+#### Knife Databag (Chef)
 Create new key for encrypting data bags 
 ```sh
 openssl rand -base64 512 | tr -d '\r\n' > /tmp/databag_secret
