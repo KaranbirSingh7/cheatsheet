@@ -162,7 +162,7 @@ Run chef-client in debug mode
 chef-client -l debug
 ```
 
-### NPM
+### npm
 
 Run npm install with verbose logging
 ```sh
