@@ -124,6 +124,14 @@ Remove cookbook from existing run_list
 knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
 ```
 
+### chef-client (Chef)
+
+Run chef-client in debug mode
+
+```bash
+chef-client -l debug
+```
+
 
 ### JFrog Artifactory 
 
