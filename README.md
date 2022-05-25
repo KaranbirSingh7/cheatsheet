@@ -124,6 +124,35 @@ Remove cookbook from existing run_list
 knife node run_list remove `hostname -s` recipe[linux_artifactory@X.X.X]
 ```
 
+Create new key for encrypting data bags 
+```sh
+openssl rand -base64 512 | tr -d '\r\n' > /tmp/databag_secret
+```
+
+Create new data bag (encrypted)
+
+```bash
+knife data bag create database database_secrets --secret-file ./databag_secret -z
+```
+
+Edit existing data bag (encrypted)
+
+```bash
+knife data bag edit database database_secrets --secret-file ./databag_secret -z
+```
+
+Show contents of data bag (encrypted)
+
+```bash
+knife data bag show database database_secrets --secret-file ./databag_secret -F json -z
+```
+
+Create new data bag from json file (encrypted)
+
+```bash
+knife data bag from file database ./database/database_secrets.json --secret-file ./databag_secret -z
+```
+
 ### chef-client (Chef)
 
 Run chef-client in debug mode
