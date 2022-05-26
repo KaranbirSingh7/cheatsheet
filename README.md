@@ -35,6 +35,11 @@ openssl x509 -in domain.public.crt -noout -modulus  | openssl md5
 openssl rsa -in domain.private.key -noout -modulus  | openssl md5
 ```
 
+Decode a pkcs12 cert bundle file
+```sh
+openssl pkcs12 -info -in INFILE.p12 -nodes
+```
+
 ### Bosh
 
 Get manifest of current deployment:
